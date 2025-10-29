@@ -160,5 +160,8 @@ Google Gemini API
 📝 License
 MIT License
 
+----------------------------------------------------------------------------------------------------------------------------------------------------
 💚 Made with precision for developers who love breaking and building beautiful web experiences.
+
+
 “Break your site safely before your users do.”
