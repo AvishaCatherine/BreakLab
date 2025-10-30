@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BreakLab</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icons/icon48.png" alt="BreakLab icon" class="icon">
+      <div class="title">
+        <div class="name">BreakLab</div>
+        <div class="subtitle">Break your site safely before your users do.</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <button id="btnLayout" class="btn">Layout View</button>
+      <button id="btnContrast" class="btn">Contrast Check</button>
+      <button id="btnPerf" class="btn">Performance Heatmap</button>
+      <button id="btnShadow" class="btn">Shadow DOM View</button>
+      <button id="btnDev" class="btn">Dev Insight</button>
+      <button id="btnAI" class="btn">AI Bug Suggestions</button>
+    </div>
+
+    <div class="footer">
+      <div id="status" class="status">Ready</div>
+      <div class="footer-actions">
+        <button id="btnSettings" class="small">Settings</button>
+        <button id="btnRevert" class="small">Revert</button>
+      </div>
+    </div>
+
+    <div id="settingsPanel" class="panel" aria-hidden="true">
+      <div class="panel-inner">
+        <h3>Settings</h3>
+
+        <label class="setting">
+          <span>Safe mode</span>
+          <input type="checkbox" id="safeMode">
+        </label>
+
+        <label class="setting">
+          <span>Whitelist hosts (comma separated)</span>
+          <input type="text" id="whitelist" placeholder="localhost, staging.example.com">
+        </label>
+
+        <hr />
+
+        <label class="setting">
+          <span>Enable remote AI (Gemini / Vertex)</span>
+          <input type="checkbox" id="useRemoteAI">
+        </label>
+
+        <label class="setting">
+          <span>Gemini / Vertex endpoint URL</span>
+          <input type="text" id="geminiEndpoint" placeholder="https://aiplatform.googleapis.com/v1/...">
+        </label>
+
+        <label class="setting">
+          <span>API key or Bearer token</span>
+          <input type="text" id="geminiApiKey" placeholder="Paste API key or token">
+        </label>
+
+        <div class="panel-actions">
+          <button id="testGemini" class="small">Test Gemini</button>
+          <button id="saveSettings" class="small">Save</button>
+          <button id="closeSettings" class="small">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="aiPanel" class="panel ai-panel" aria-hidden="true">
+      <div class="ai-header">
+        <div class="ai-title">AI Bug Suggestions</div>
+        <button id="aiClose" class="small">Close</button>
+      </div>
+      <div id="aiList" class="ai-list">Click "AI Bug Suggestions" to scan the page.</div>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
+
