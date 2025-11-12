@@ -83,6 +83,7 @@ Select your BreakLab folder
 The green BreakLab icon will appear in your Chrome toolbar
 
 ⚙️ Features in Detail
+
 1️⃣ Layout Visualization
 
 Color-coded outlines group similar DOM elements
